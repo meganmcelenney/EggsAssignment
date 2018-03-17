@@ -1,0 +1,36 @@
+/*
+ * Megan McElenney
+ */
+package eggsassignment;
+
+import javax.swing.JOptionPane;
+
+public class EggsAssignment 
+{
+
+    public static void main(String[] args) 
+    {
+        String input;
+        int eggs;
+        int dozen;
+        int individual;
+        double total;
+        
+                       
+        final double DOZENCOST = 3.25;
+        final double INDIVIDUALCOST = 0.45;
+        
+        input = JOptionPane.showInputDialog("How many eggs are in the order?");
+        eggs = Integer. parseInt (input);
+        
+        dozen = eggs/12;
+        individual = eggs%12;
+        total = dozen * DOZENCOST + individual * INDIVIDUALCOST;
+        
+        JOptionPane.showMessageDialog(null, "You ordered " + eggs + " eggs. "
+                + "That's " + dozen + " dozen at $" + DOZENCOST + " per dozen "
+                + "and " + individual + " loose eggs at " + INDIVIDUALCOST + 
+                " cents each for a total of $" + total);    
+    }
+    
+}
